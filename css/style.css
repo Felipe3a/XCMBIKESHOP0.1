@@ -441,12 +441,12 @@ color: #ffffff;}
 
 
 .section-contato {
-    background-image: url('/uploads/capa/clear-yellow-wall (1).jpg');
+    background-image: url('clear-yellow-wall (1).jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+   
 }
-
 
 @keyframes fadeIn {
     from {
