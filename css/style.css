@@ -6,7 +6,8 @@
 }
 /*CLASS*/
 .branco   { color: #ffffff; }
-.amarelo    { color: #fcc835; }
+.amarelo    { color: #fcc835;
+ }
 .cinza{ color: #5a575c; }
 
 .title { width:100%; float:left; margin-top:40px; margin-bottom:40px; padding-bottom:10px;  font-family:'open_sansbold'; font-size:2em; font-weight:bold; text-transform:uppercase; }
@@ -59,9 +60,12 @@
 
 
 
-.section-sobre          { background-color:black;color: #dee5ed; 
+.section-sobre          { 
+    background-color:black;
+    color: #dee5ed; 
 text-align:justify;
-height: 100%; }
+height: 100%; 
+}
 
 .section-sobre .content { float:left; padding: 0.5em 0 0em 0;text-align: center; }
 
