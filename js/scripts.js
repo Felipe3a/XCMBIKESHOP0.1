@@ -95,3 +95,42 @@ $(function () {
     });
 
 });
+
+
+
+
+
+
+
+// Função para abrir o popup
+function abrirPopup() {
+    const popup = document.getElementById('popup');
+    popup.style.display = 'block';
+    popup.classList.add('aberto'); // Mostra o botão fechar também
+  }
+  
+  // Função para fechar o popup
+  function fecharPopup() {
+    const popup = document.getElementById('popup');
+    popup.style.display = 'none';
+    popup.classList.remove('aberto'); // Esconde o botão fechar
+  }
+  
+  // Função para detectar se a seção serviços está na tela
+  function checarVisibilidade() {
+    const servicos = document.getElementById('modalidades');
+    const rect = servicos.getBoundingClientRect();
+    
+    if (rect.top < window.innerHeight && rect.bottom >= 0) {
+      if (!popupJaMostrado) {
+        setTimeout(abrirPopup, 5000); // Espera 2 segundos depois de entrar
+        popupJaMostrado = true; // Para não ficar abrindo toda hora
+      }
+    }
+  }
+  
+  let popupJaMostrado = false;
+  
+  // Escutar o scroll da página
+  window.addEventListener('scroll', checarVisibilidade);
+  

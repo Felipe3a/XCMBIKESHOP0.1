@@ -348,7 +348,6 @@ color: #ffffff;}
 .section-galeria .content  { float:left; padding: 5em 0 5em 0; }
 .section-contato .content  { float:left; padding: 5em 0 5em 0; }
 
-
 .info   { margin-bottom:20px; }
 .coluna { width:48%; float:left; margin-right:4%; margin-bottom:0; }
 .coluna:nth-of-type(2n+0) { margin-right:0; }
@@ -469,5 +468,76 @@ color: #ffffff;}
 @media (max-width: 768px) {
     .mapa-responsivo {
         display: none;
+    }
+}
+
+
+
+
+
+/* Fundo escuro */
+.popup {
+    display: none; /* Começa invisível */
+    position: fixed;
+    z-index: 999;
+    top: 80px; /* distância do topo */
+    right: 20px; /* distância da direita */
+    width: 250px; /* largura do popup */
+    height: auto; /* altura automática conforme conteúdo */
+    background-color: rgba(5, 4, 6, 0.275); /* Fundo escuro */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+/* Conteúdo dentro do popup */
+.popup-content {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* Botão de fechar */
+.fechar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    display: none; /* Só aparece junto com o popup */
+}
+
+/* Mostrar botão quando popup estiver aberto */
+.popup.aberto .fechar {
+    display: block;
+}
+.section-chamada {
+    padding: 0;
+    background-color: #fff;
+  }
+  
+
+
+
+
+
+
+  .img-celular {
+    display: none;
+}
+
+
+
+@media (max-width: 768px) {
+    .img-desktop {
+        display: none;
+    }
+    .img-celular {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
