@@ -106,21 +106,13 @@ height: 100%;
     grid-template-columns: 2fr 2fr;
  float:left;
   padding: 0.5em 0 0em 0;
-
+  background-image: url('clear-yellow-wall (1).jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+ 
 
 }
-
-
-/* Ajustes para telas menores */
-@media (max-width: 768px) {
-    .section-contato .content {  
-        grid-template-columns: 1fr; /* Torna o layout de uma única coluna */
-        text-align: center; /* Centraliza o conteúdo */
-        padding: 10px 10px 50px 10px;
-    }
-}
-
-
 
 
 
@@ -142,99 +134,93 @@ height: 100%;
 }
 
 /* Cartão de contatos */
-.info {
-    max-width: 100%;
-    width: 90%;
-    float: left;
-    display: block;
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: #7b7979;
-    box-shadow: 0 50px 50px #000000;
-    border-radius: 5px;
-    white-space: nowrap;
-    overflow: hidden;
-}
 
-/* Adapte elementos dentro do .info */
-.info p, .info a {
-    width: 100%;
-    margin-bottom: 5px;
-    color: #ede4e4;
-    text-decoration: none;
-}
-.info p i, .info a i {
-    margin-right: 5px;
-}
 
-a:hover {
-    color: #fcc835;
-}
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .info {
-        width: 100%;
-        padding: 15px;
-        text-align: center;
-    }
-    
-    .info p, .info a {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .info {
-        width: 100%;
-        padding: 10px;
-    }
-    
-    .info p, .info a {
-        font-size: 12px;
-    }
-}
-
-@media (max-width: 375px) and (max-height: 677px) {
-    .info {
-        width: 100%;
-        padding: 10px;
-        text-align: center;
-    }
-
-    .info p, .info a {
-        font-size: 12px;
-    }
-
-    .info a i, .info p i {
-        margin-right: 3px;
-    }
-}
 
 iframe{
     box-shadow: 0  50px 50px  #000000;
     border-radius: 5px;
 }
 
-.info p{ width:100%; margin-bottom:5px;  color:#ede4e4; }
-.info p i { margin-right:5px; }
-.info a{width:100%; margin-bottom:5px;  color:#ede4e4; text-decoration: none;}
-.info a i { margin-right:5px; }
-
-a:hover{
-    color: #fcc835;}
-
-
 
 
     /*cartão de contatos*/
-.info { width:100%; float:left; display:block; margin-bottom:20px;  padding: 20px;
-      background-color:#7b7979;
-       box-shadow: 0  50px 50px  #000000;
+  
+ /* Cartão de Contatos - Info */
+.info {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #7b7979;
+    box-shadow: 0 50px 50px #000000;
     border-radius: 5px;
-    white-space: normal;
- 
+    text-align: left;
 }
+
+/* Elementos de texto e links dentro de .info */
+.info p, 
+.info a {
+    width: 100%;
+    margin-bottom: 5px;
+    color: #ede4e4;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.info p i, 
+.info a i {
+    margin-right: 5px;
+}
+
+/* Hover dos links */
+.info a:hover {
+    color: #fcc835;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .info {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .info p, 
+    .info a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .info {
+        padding: 10px;
+    }
+
+    .info p, 
+    .info a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 375px) and (max-height: 677px) {
+    .info {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .info p, 
+    .info a {
+        font-size: 12px;
+    }
+
+    .info p i, 
+    .info a i {
+        margin-right: 3px;
+    }
+}
+
+           
 /*FOOTER*/
 .main_footer { background-color:black; color:#fff; font-size:0.875em; }
 
@@ -452,6 +438,15 @@ color: #ffffff;}
    
 }
 
+/* Responsividade para celulares */
+@media (max-width: 768px) {
+    .section-contato {
+        background-attachment: scroll; /* Corrige bugs de "background fixo" em celular */
+        padding: 20px 10px;
+    }
+}
+
+
 @keyframes fadeIn {
     from {
         opacity: 0; /* Começa invisível */
@@ -465,4 +460,23 @@ color: #ffffff;}
 
 .centraliza p, .centraliza h1 {
     animation: fadeIn 1.5s ease-in-out; /* Aplica a animação */
+}
+
+
+.mapa-responsivo {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Proporção 16:9 (altura/largura) */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px; /* opcional: deixa as bordas arredondadas */
+}
+
+.mapa-responsivo iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
