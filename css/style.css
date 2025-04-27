@@ -542,3 +542,11 @@ color: #ffffff;}
     }
     
 }
+
+
+.italic {
+    font-style: italic;
+    font-weight: normal; /* Ou bold, dependendo do efeito desejado */
+    font-family: 'open_sansbold', sans-serif; /* Experimente diferentes fontes */
+  }
+      
