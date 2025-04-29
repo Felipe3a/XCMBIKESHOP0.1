@@ -99,22 +99,23 @@ height: 100%;
 /*Termina Galeria*/
 
 /*Contato*/
+#contato{  background-image: url('paredeamarelateste.png');}
+
+
+
+
 
 .section-contato .content { 
+ 
     display: grid; 
     grid-template-columns: 2fr 2fr;
- float:left;
-  padding: 0.5em 0 0em 0;
-  background-image: url('clear-yellow-wall (1).jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
- 
-
+    padding: 0.5em 0 0em 0;
+  
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh; /* adiciona altura mínima de 100% da tela */
 }
-
-
-
 
 
 
